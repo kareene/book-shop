@@ -33,6 +33,7 @@ function onRemoveBook(bookId) {
 
 function onAddUpdateBook(bookId) {
     onHideBookDetails();
+    onCloseInputModal();
     var elInputModal = document.querySelector('.input-modal');
     elInputModal.style.display = 'flex';
     if (bookId) {
