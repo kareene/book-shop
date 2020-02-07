@@ -1,0 +1,193 @@
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .details-modal {
+    right: 6rem;
+} 
+
+body.rtl .input-modal {
+    right: 6rem;
+} 
+
+body.rtl .arrow-next img {
+    transform: rotate(180deg); 
+}
+
+body.rtl .arrow-prev img {
+    transform: rotate(0deg);; 
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+select {
+    background-color: #CCC;
+    border-color: grey;
+    margin: 0.25rem;
+    font-size: 0.8rem;
+    height: 1.6rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: cursive;
+    color: black;
+    text-shadow: -0.15rem -0.15rem 1.3rem #DDD, 0.15rem -0.15rem 1.3rem #DDD,
+    -0.15rem 0.15rem 1.3rem #DDD, 0.15rem 0.15rem 1.3rem #DDD;
+}
+
+.page-arrow-container {
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+    margin: 1rem auto 1rem auto;
+}
+
+.page-arrow-container * {
+    background-color: #BBB;
+    border-color: grey;
+    border-radius: 0.25rem;
+}
+
+.add {
+    font-family: Times;
+    font-size: 1rem;
+}
+
+.arrow img {
+    max-height: 1.5rem;
+    vertical-align: middle;
+}
+
+.arrow-prev img {
+    transform: rotate(180deg);;
+}
+
+table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+table {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+th {
+    padding: 0.5rem;
+}
+
+td { 
+    padding: 0.3rem;
+}
+
+tr:nth-child(even) {
+    background-color: #DDD;
+}
+
+tr:nth-child(odd) {
+    background-color: #EEE;
+}
+
+th {
+    background-color: #BBB;
+}
+
+.id, .price, .rate {
+    width: 10%;
+    text-align: center;
+}
+
+.action {
+    width: 6%;
+    text-align: center;
+}
+
+.name {
+    width: 52%;
+}
+
+button, .sort, .action {
+    cursor: pointer;
+    user-select: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.input-modal {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #BBB;
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 0.25rem;
+    left: 6rem;
+    padding: 1rem;
+    width: 24rem;
+    height: 7rem;
+}
+
+.input-name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-price-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-btn-container {
+    align-self: center;
+}
+
+.input-modal input {
+    width: 15rem;
+}
+
+.details-modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #BBB;
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 0.25rem;
+    left: 6rem;
+    padding: 1rem;
+    width: 20rem;
+    text-align: center;
+}
+
+.details-modal button {
+    align-self: flex-end;
+}
+
+.details-modal img {
+    width: 18rem;
+}
+
+.rating {
+    background-color: #AAA;
+    border: 1px solid grey;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+
+.rating input {
+    width: 1rem;
+    text-align: center;
+}

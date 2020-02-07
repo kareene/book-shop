@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <select onchange="onSetLang(this.value)">
+        <option value="en">🇺🇸 English</option>
+        <option value="he">🇮🇱 עברית</option>
+    </select>
+    <h1 data-trans="title">Welcome to My Bookshop</h1>
+    <div class="page-arrow-container">
+        <button class="arrow arrow-prev" onclick="onChangePage(-1)" data-title="arrowPrev">
+            <img src="img/arrow.png" alt="">
+        </button>
+        <button class="add" data-trans="add" onclick="onAddUpdateBook()">Create New Book</button>
+        <button class="arrow arrow-next" onclick="onChangePage(1)" data-title="arrowNext">
+            <img src="img/arrow.png" alt="">
+        </button>
+    </div>
+    <table>
+        <thead>
+            <th data-trans="id">Id</th>
+            <th class="sort" title="Sort" data-trans="name" data-title="sort" onclick="onSortChanged('name')">Title</th>
+            <th class="sort" title="Sort" data-trans="price" data-title="sort" onclick="onSortChanged('price')">Price</th>
+            <th data-trans="rating">Rating</th>
+            <th colspan="3" data-trans="actions">Actions</th>
+        </thead>
+        <tbody class="books-list"></tbody>
+    </table>
+
+    <div class="input-modal" data-id="">
+        <div class="input-name-container">
+            <label data-trans="addNameEnLable">Book Title - English</label>
+            <input name="nameEn" type="text" data-trans="addNameEnPlaceholder" placeholder="Enter book Title in English" />
+        </div>
+        <div class="input-name-container">
+            <label data-trans="addNameHeLable">Book Title - Hebrew</label>
+            <input name="nameHe" type="text" data-trans="addNameHePlaceholder" placeholder="Enter book Title in Hebrew" />
+        </div>
+        <div class="input-price-container">
+            <label data-trans="addPriceLable">Price</label>
+            <input name="price" type="number" data-trans="addPricePlaceholder" placeholder="Enter Book Price in USD" />
+        </div>
+        <div class="input-btn-container">
+            <button data-trans="save" onclick="onSaveBookInfo()">Save</button>
+            <button data-trans="cancel" onclick="onCloseInputModal()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="details-modal" data-id="">
+        <button onclick=onHideBookDetails()>x</button>
+        <h3 data-book=""></h3>
+        <img src="" alt="Book Cover Image" />
+        <h4><span data-trans="price"></span>: <span data-price=""></span></h4>
+        <div class="rating">
+            <button onclick="onRateBook(-1)">-</button>
+            <input disabled type="text" />
+            <button onclick="onRateBook(1)">+</button>
+        </div>
+    </div>
+
+    <script src="js/util-service.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>
